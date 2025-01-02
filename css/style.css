@@ -29,18 +29,18 @@ Paragraph default: 1.6
 /* ********************* */
 /* STICKY NAVIGATION */
 /* ********************* */
-.sticky {
+.header.sticky {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     box-shadow: 0 2px 5px rgba(170, 168, 168, 0.5);
-    background-color: rgba(1, 1, 1, 0.8)!important;
-    z-index: 1000; /* Ensure navigation stays on top */
-    color: #fff!important;
-}
+    background-color: rgba(1, 1, 1, 0.8) !important;
+    z-index: 1000;
+    color: #fff !important;
+  }
 .section-about {
-    padding-top: 100px; /* Add space at the top to accommodate sticky navigation */
+    padding-top: 100px; 
 }
 .headerStyle{
     display: flex;
@@ -57,12 +57,12 @@ Paragraph default: 1.6
 /* HEADER */
 /* ********************* */
 .main-page{
-    max-width: 135rem;
-    margin: 0 auto;
+    /* max-width: 135rem;
+    margin: 0 auto; */
 }
 .header{
-    max-width: 135rem;
-    margin: 0 auto;
+    /* max-width: 135rem;
+    margin: 0 auto; */
     /*  */
     display: flex;
     justify-content: space-between;
@@ -78,6 +78,7 @@ Paragraph default: 1.6
 .logo{
     height: 4.8rem;
     display: inline-block;
+    z-index: 99999;
 }
 /* ********************* */
 /* NAVIGATION */
@@ -120,11 +121,21 @@ Paragraph default: 1.6
     background: none;
     cursor: pointer;
     display: none;
+    z-index: 9999;
+}
+.header.sticky .icon-mobile-nav {
+    color: #fff; /* Make the icon white */
+    background-color: transparent; /* Ensure no background for the icon */
+    border: #fff;
+    height: 4.8rem; 
+    width: 4.8rem;
+    z-index: 9999; /* Ensure it's above other elements */
 }
 .icon-mobile-nav{
     height: 4.8rem;
     width: 4.8rem;
     color: #333;
+    z-index: 9999;
 }
 .icon-mobile-nav[name="close-outline"]{
     display: none;
@@ -217,7 +228,7 @@ hr{
 }
 .services-items{
     display: grid;
-    grid-template-columns: repeat(3, 1fr)!important;
+    grid-template-columns: repeat(3, 1fr);
     gap: 3.2rem;
 }
 .services-item{
@@ -279,7 +290,7 @@ hr{
     margin-bottom: 1.2rem;
 }
 .step-description{
-    font-size: 1.8rem;
+    font-size: 18px;
     line-height: 1.6;
 }
 .step-img-box{
