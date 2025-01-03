@@ -30,6 +30,9 @@ Paragraph default: 1.6
 /* STICKY NAVIGATION */
 /* ********************* */
 .header.sticky {
+    max-width: 135rem;
+    margin: 0 auto!important;
+    text-align: center!important;
     position: fixed;
     top: 0;
     right: 0;
@@ -56,13 +59,10 @@ Paragraph default: 1.6
 /* ********************* */
 /* HEADER */
 /* ********************* */
-.main-page{
-    /* max-width: 135rem;
-    margin: 0 auto; */
-}
+
 .header{
-    /* max-width: 135rem;
-    margin: 0 auto; */
+    max-width: 135rem;
+    margin: 0 auto;
     /*  */
     display: flex;
     justify-content: space-between;
@@ -124,12 +124,12 @@ Paragraph default: 1.6
     z-index: 9999;
 }
 .header.sticky .icon-mobile-nav {
-    color: #fff; /* Make the icon white */
-    background-color: transparent; /* Ensure no background for the icon */
+    color: #fff;
+    background-color: transparent; 
     border: #fff;
     height: 4.8rem; 
     width: 4.8rem;
-    z-index: 9999; /* Ensure it's above other elements */
+    z-index: 9999; 
 }
 .icon-mobile-nav{
     height: 4.8rem;
