@@ -30,9 +30,6 @@ Paragraph default: 1.6
 /* STICKY NAVIGATION */
 /* ********************* */
 .header.sticky {
-    max-width: 135rem;
-    margin: 0 auto!important;
-    text-align: center!important;
     position: fixed;
     top: 0;
     right: 0;
@@ -41,7 +38,7 @@ Paragraph default: 1.6
     background-color: rgba(1, 1, 1, 0.8) !important;
     z-index: 1000;
     color: #fff !important;
-  }
+}
 .section-about {
     padding-top: 100px; 
 }

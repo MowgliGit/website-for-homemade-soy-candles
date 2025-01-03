@@ -1,8 +1,11 @@
 //Make Mobile Navigation work
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header");
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
+document.addEventListener("DOMContentLoaded", () => {
+  const btnNavEl = document.querySelector(".btn-mobile-nav");
+  const headerEl = document.querySelector(".header");
+
+  btnNavEl.addEventListener("click", () => {
+    headerEl.classList.toggle("nav-open");
+  });
 });
 //Passing Arguments to Event Handlers
 const nav = document.querySelector(".main-nav");
@@ -32,6 +35,7 @@ nav.addEventListener("mouseout", function (e) {
     logo.style.opacity = 1;
   }
 });
+//end of Passing Arguments to Event Handlers
 
 //Implementing a Sticky Navigation: The Scroll Event
 
@@ -87,6 +91,7 @@ window.addEventListener("scroll", function () {
 });
 
 //Implementing Smooth Scrolling
+
 const btnFull = document.querySelector(".btn--full");
 const btnOutline = document.querySelector(".btn--outline");
 const sectionCandles = document.getElementById("section-candles");
@@ -183,3 +188,18 @@ btnContainer.addEventListener("click", function (e) {
 
   console.log(clicked.dataset.tab);
 });
+
+// Add sticky class on scroll
+// const header = document.querySelector(".header");
+const heroSection = document.querySelector(".section-hero");
+
+function checkScroll() {
+  const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+  // Add or remove the sticky class based on scroll position
+  if (heroBottom < 0) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
