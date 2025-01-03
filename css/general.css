@@ -44,6 +44,10 @@ body {
   color: #555;
   overflow-x: hidden;
 }
+.main-page {
+  max-width: 135rem;
+  margin: 0 auto;
+}
 /* ********************* */
 /* GENERAL REUSABLE COMPONENTS */
 /* ********************* */
