@@ -7,6 +7,7 @@ FONT SIZE SYSTEM (px)
 */
 /* bellow 1280px */
 @media (max-width: 80em) {
+    /* section navigation */
   .header {
     max-width: 125rem;
   }
@@ -19,7 +20,8 @@ FONT SIZE SYSTEM (px)
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 4.8rem;
-}
+   }
+/* section hero */
   .heading-primary {
     font-size: 4rem;
     margin-bottom: 3.2rem;
@@ -27,16 +29,17 @@ FONT SIZE SYSTEM (px)
   }
   .hero-img{
     margin-bottom: 10rem;
-}
-.btn{
+   }
+  .btn{
     font-size: 1.8rem;
     font-weight: 600;
     padding: 1.4rem 3rem;
     margin-bottom: 2rem;
-}
+   }
 }
 /* bellow 1180px */
 @media (max-width: 73.75em) {
+    /* general */
     html{
         font-size: 56.25%;
     }
@@ -47,12 +50,6 @@ FONT SIZE SYSTEM (px)
     .grid--3-cols{
         grid-template-columns: repeat(3, 1fr );
         column-gap: 2.5rem;
-    }
-    .header{
-        padding: 0 3.2rem;
-    }
-    .hero-img{
-        margin-bottom: 15rem;
     }
     .heading-secondary{
         font-size: 3rem;
@@ -69,13 +66,23 @@ FONT SIZE SYSTEM (px)
         margin-bottom: 2.4rem;
         font-weight: 600;
     }
+    /* section header */
+    .header{
+        padding: 0 3.2rem;
+    }
+    .hero-img{
+        margin-bottom: 15rem;
+    }
+   /* section testimonial */
     .testimonial-container {
        
         padding: 0;
     }
+   /*  section cta */
     input{
         width: 60%;
     }
+    /* section footer */
     .footer-name {
         margin-right: 0!important;
         width: 100%;
@@ -84,9 +91,11 @@ FONT SIZE SYSTEM (px)
   }
   /* bellow 900px */
 @media (max-width: 56.25em) {
+    /* general */
     html{
         font-size: 50%;
     }
+    /* section hero */
     .hero{
         grid-template-columns: 1fr;
         align-items: center;
@@ -109,15 +118,19 @@ FONT SIZE SYSTEM (px)
         justify-content: center;
         margin-top: 3.2rem;
     }
+    /* section-services */
     .services-items{
         gap: 1.5rem;
     }
+    /* section-how */
     .step-number{
         font-size: 7.4rem;
     }
+    /* section candles */
     .candle-content{
         padding: 1.6rem;
     }
+    /* section footer */
     .footer-name {
         margin-right: 0!important;
         width: 100%;
@@ -126,6 +139,35 @@ FONT SIZE SYSTEM (px)
 }
   /* bellow 750px */
 @media (max-width: 46.87em) {
+    /* general */
+.grid--2-cols {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 3rem;
+}
+.grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+.container{
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 4.8rem;
+}
+.grid-item-center {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    grid-column: 1/-1;
+    width: 50%;
+}
+.heading-tertiary{
+    font-size: 2.4rem;
+    margin-bottom: 4.8rem;
+    font-weight: 600;
+}
+    /* section navigation */
 .btn-mobile-nav{
     display: block;
 }
@@ -178,21 +220,7 @@ FONT SIZE SYSTEM (px)
     background-color: #333;
     color: #fff!important;
 }
-.grid--2-cols {
-    grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 3rem;
-}
-.grid--3-cols {
-    grid-template-columns: repeat(2, 1fr);
-}
-.grid--4-cols {
-    grid-template-columns: repeat(2, 1fr);
-}
-.container{
-    max-width: 100rem;
-    margin: 0 auto;
-    padding: 0 4.8rem;
-}
+/* section hero */
 .hero{
     max-width: 100rem;
     margin: 0 auto;
@@ -203,6 +231,7 @@ FONT SIZE SYSTEM (px)
     width: 90%;
     margin: 0 auto !important;
 }
+/* section services */
 .services-items{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -215,6 +244,7 @@ FONT SIZE SYSTEM (px)
     line-height: 1.4;
     margin-bottom: 0.5rem;
 }
+/* section how */
 .operations__tab-container{
     flex-wrap: wrap;
 }
@@ -231,6 +261,7 @@ FONT SIZE SYSTEM (px)
     margin: 0 auto!important;
     justify-self: center!important;
 }
+/* section gallery */
 .gallery-img{
     width: 100%;
 }
@@ -248,21 +279,10 @@ FONT SIZE SYSTEM (px)
     grid-area: photoOne;
     height: 100%;
 }
-.grid-item-center {
-    justify-self: center;
-    align-self: center;
-    text-align: center;
-    grid-column: 1/-1;
-    width: 50%;
-}
+/* section testimonials */
 .testimonials.container{
     width: 60rem;
     margin: 0 auto;
-}
-.heading-tertiary{
-    font-size: 2.4rem;
-    margin-bottom: 4.8rem;
-    font-weight: 600;
 }
 .testimonials.container{
     max-width: 100rem;
@@ -272,7 +292,7 @@ FONT SIZE SYSTEM (px)
 .testimonial-container{
     padding: 6.4rem 0rem;
 }
-
+/* section cta */
 .quick-links{
     display: grid;
     grid-template-columns: repeat(3, 10rem);
@@ -286,6 +306,7 @@ FONT SIZE SYSTEM (px)
     justify-self: center;
     text-align: center;
 }
+/* section footer */
 .footer-name {
     margin-right: 0!important;
     width: 100%;
@@ -294,6 +315,7 @@ FONT SIZE SYSTEM (px)
 }
 /* bellow 550px */
 @media (max-width: 37.5em) {
+    /* general */
     .container {
         max-width: 80rem;
         margin: 0 auto;
@@ -310,23 +332,6 @@ FONT SIZE SYSTEM (px)
     .section-footer{
         padding: 4.8rem 0;
     }
-    .hero{
-        max-width: 80rem;
-        margin: 0 auto;
-        padding: 0 4.8rem;
-    }
-    .hero-img {
-        margin-bottom: 0rem;
-        width: 100%;
-        margin: 0 auto !important;
-    }
-    .text-about {
-        font-size: 16px;
-        line-height: 1.7;
-    }
-    .step-img-box img {
-        width: 100%;
-    }
     .grid--2-cols {
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 3rem;
@@ -342,6 +347,34 @@ FONT SIZE SYSTEM (px)
         grid-column: 1/-1;
         width: 100%;
     }
+    /* section hero */
+    .hero{
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 4.8rem;
+    }
+    .hero-img {
+        margin-bottom: 0rem;
+        width: 100%;
+        margin: 0 auto !important;
+    }
+    /* section about */
+    .text-about {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    /* section how */
+    .step-img-box img {
+        width: 100%;
+    }
+    .step-description{
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .step-img{
+        margin-top: 0;
+    }
+   /* section services */
     .services-items{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -359,13 +392,7 @@ FONT SIZE SYSTEM (px)
         grid-column: 1/-1; 
         width: 100%;
     }
-    .step-description{
-        font-size: 16px;
-        line-height: 1.8;
-    }
-    .step-img{
-        margin-top: 0;
-    }
+    /* section gallery */
     .grid-gallery{
         gap: 0.5rem;
         display: grid;
@@ -378,9 +405,11 @@ FONT SIZE SYSTEM (px)
         "photoFive";
         grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr  0.5fr;
     }
+    /* section candle */
     .candle-content{
         padding: 2.5rem 5rem;
     }  
+    /* section testimonials */
     .section-testimonials{
         padding: 9.6rem 0 6.4rem 0;
     }
@@ -389,11 +418,13 @@ FONT SIZE SYSTEM (px)
         margin: 0 auto;
         padding: 0rem 4.8rem;
     }
+    /* section cta */
     .links-box{
         align-self: center;
         justify-self: center;
         text-align: center;
     }
+    /* section footer */
     .footer-name {
         margin-right: 0!important;
         width: 15rem;
@@ -402,12 +433,15 @@ FONT SIZE SYSTEM (px)
 }
 /* bellow 400px */
 @media (max-width: 25em) {
+    /* general */
     .container {
         padding:0 2.4rem;
     }
+    /* section hero */
     .hero{
         padding: 0 2.4rem;
     }
+    /* section how */
     .section-how.container.tabbed-component{
         padding: 0;
     }
@@ -429,11 +463,13 @@ FONT SIZE SYSTEM (px)
         border: none;
         cursor: pointer;
     }
+    /* section tetsimonials */
     .testimonials.container{
         max-width: 50rem;
         margin: 0 auto;
         padding: 0rem 3.2rem;
     }
+    /* section footer */
     .footer-icon {
         width: 25rem;
         display: flex;
