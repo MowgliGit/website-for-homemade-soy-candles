@@ -44,7 +44,7 @@ const initiaLCoords = sectionAbout.getBoundingClientRect();
 
 window.addEventListener("scroll", function (e) {
   document.querySelectorAll(".main-nav-link").forEach(function (el) {
-    if (window.scrollY > sectionAbout.offsetTop) {
+    if (window.scrollY >= sectionAbout.offsetTop) {
       header.classList.remove("headerStyle");
       header.classList.add("sticky");
       header.style.transparent = 0.5;
@@ -65,7 +65,7 @@ document.querySelector(".header").addEventListener("click", function (e) {
   console.log(sectionAbout.offsetTop);
   console.log(scrollPosition);
 
-  if (window.scrollY <= sectionAbout.offsetTop) {
+  if (window.scrollY < sectionAbout.offsetTop) {
     e.currentTarget.classList.toggle("headerStyle");
 
     document.querySelectorAll(".main-nav-link").forEach(function (el) {
@@ -79,7 +79,7 @@ document.querySelector(".header").addEventListener("click", function (e) {
 });
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY <= sectionAbout.offsetTop) {
+  if (window.scrollY < sectionAbout.offsetTop) {
     document.querySelectorAll(".main-nav-link").forEach(function (link) {
       if (header.classList.contains("headerStyle")) {
         link.style.color = "#fff";

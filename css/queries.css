@@ -170,19 +170,25 @@ FONT SIZE SYSTEM (px)
     /* section navigation */
 .btn-mobile-nav{
     display: block;
+    border: none;
+}
+.headerStyle{
+    background: none!important;
 }
 .main-nav{
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgb(31, 134, 134, 0.9);
-    width: 100%;
+    width: 50%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
     transition: all 0.5s ease-in;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
     /* HIDE NAVIGATION */
     /* allow no transition at allow */
     /* display: none; */
@@ -348,6 +354,9 @@ FONT SIZE SYSTEM (px)
         width: 100%;
     }
     /* section hero */
+    .headerStyle{
+        background: none!important;
+    }
     .hero{
         max-width: 80rem;
         margin: 0 auto;
