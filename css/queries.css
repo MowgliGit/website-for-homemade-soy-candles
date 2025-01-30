@@ -168,50 +168,80 @@ FONT SIZE SYSTEM (px)
     font-weight: 600;
 }
     /* section navigation */
-.btn-mobile-nav{
-    display: block;
-    border: none;
-}
-.headerStyle{
-    background: none!important;
-}
-.main-nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgb(31, 134, 134, 0.9);
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(100%);
-    transition: all 0.5s ease-in;
-    border-top-right-radius: 9rem;
-    border-bottom-right-radius: 9rem;
-    /* HIDE NAVIGATION */
-    /* allow no transition at allow */
-    /* display: none; */
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-.main-nav-list{
-    flex-direction: column;
-    gap: 4.8rem;
-}
-.nav-open .main-nav{
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0%);
-}
-.nav-open .icon-mobile-nav[name="close-outline"]{
-    display: block;
-}
-.nav-open .icon-mobile-nav[name="menu-outline"]{
-    display: none;
-}
+    .btn-mobile-nav {
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: none;
+        z-index: 9999;
+    }
+    
+    .main-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(31, 134, 134, 0.9);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in;
+        border-top-right-radius: 9rem;
+        border-bottom-right-radius: 9rem;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+    
+    .nav-open .main-nav {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0%);
+    }
+    
+    /* Styling for links */
+    .main-nav-list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+    }
+    
+    .main-nav-link {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        font-size: 3rem;
+        transition: all 0.3s;
+        display: inline-block;
+    }
+    
+    .main-nav-link.nav-cta {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    /* Show close icon when nav is open */
+    .nav-open .icon-mobile-nav[name="close-outline"] {
+        display: block;
+    }
+    
+    .nav-open .icon-mobile-nav[name="menu-outline"] {
+        display: none;
+    }
+
+        .btn-mobile-nav {
+            display: block;
+        }
+    
+        .main-nav-list {
+            flex-direction: column;
+            gap: 4.8rem;
+        }
+ 
 .main-nav-link:link,
 .main-nav-link:visited{
     text-decoration: none;

@@ -92,17 +92,32 @@ window.addEventListener("scroll", function () {
 
 //Implementing Smooth Scrolling
 
-const btnFull = document.querySelector(".btn--full");
-const btnOutline = document.querySelector(".btn--outline");
-const sectionCandles = document.getElementById("section-candles");
-const sectionCta = document.getElementById("section-cta");
+document.addEventListener("DOMContentLoaded", () => {
+  const btnNavEl = document.querySelector(".btn-mobile-nav");
+  const headerEl = document.querySelector(".header");
+  const navLinks = document.querySelectorAll(".main-nav-link");
 
-btnFull.addEventListener("click", function (e) {
-  sectionCandles.scrollIntoView({ behavior: "smooth" });
-});
+  btnNavEl.addEventListener("click", () => {
+    headerEl.classList.toggle("nav-open");
+  });
 
-btnOutline.addEventListener("click", function (e) {
-  sectionCta.scrollIntoView({ behavior: "smooth" });
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      headerEl.classList.remove("nav-open");
+
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - headerEl.offsetHeight,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });
 
 // //Implementing Smooth Scrolling FOR NAVIGATION
@@ -203,3 +218,46 @@ function checkScroll() {
     header.classList.remove("sticky");
   }
 }
+// mobile navigation
+// const menuButton = document.querySelector(".btn-mobile-nav"); //
+// const mainNav = document.querySelector(".main-nav"); // The mobile
+// const navLinks = document.querySelectorAll(".main-nav-link"); //
+
+// menuButton.addEventListener("click", function () {
+//   document.body.classList.toggle("nav-open");
+// });
+
+// // Close the menu when any nav link is clicked
+// navLinks.forEach((link) => {
+//   link.addEventListener("click", function () {
+//     document.body.classList.remove("nav-open");
+//   });
+// });
+const menuButton = document.querySelector(".btn-mobile-nav");
+const mainNav = document.querySelector(".main-nav");
+const navLinks = document.querySelectorAll(".main-nav-link");
+
+// Toggle the menu when the menu button is clicked
+menuButton.addEventListener("click", function () {
+  document.body.classList.toggle("nav-open");
+});
+
+// Close the menu when any nav link is clicked
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    document.body.classList.remove("nav-open");
+
+    // Scroll smoothly to the section
+    const targetId = this.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      window.scrollTo({
+        top:
+          targetSection.offsetTop -
+          document.querySelector(".header").offsetHeight,
+        behavior: "smooth",
+      });
+    }
+  });
+});

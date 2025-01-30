@@ -58,7 +58,7 @@ Paragraph default: 1.6
 /* ********************* */
 
 .header{
-    max-width: 135rem;
+    max-width: 155rem;
     margin: 0 auto;
     /*  */
     display: flex;
