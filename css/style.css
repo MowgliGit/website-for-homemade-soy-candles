@@ -30,9 +30,11 @@ Paragraph default: 1.6
 /* STICKY NAVIGATION */
 /* ********************* */
 .header.sticky {
+    max-width: 155rem;
+    margin: 0 auto;
     position: fixed;
     top: 0;
-    right: 0;
+   
     width: 100%;
     box-shadow: 0 2px 5px rgba(170, 168, 168, 0.5);
     background-color: rgba(1, 1, 1, 0.8) !important;
@@ -43,6 +45,8 @@ Paragraph default: 1.6
     padding-top: 100px; 
 }
 .headerStyle{
+    max-width: 135rem;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +62,7 @@ Paragraph default: 1.6
 /* ********************* */
 
 .header{
-    max-width: 155rem;
+    max-width: 135rem;
     margin: 0 auto;
     /*  */
     display: flex;

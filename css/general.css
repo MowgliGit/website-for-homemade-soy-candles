@@ -43,6 +43,8 @@ body {
   font-weight: 400;
   color: #555;
   overflow-x: hidden;
+  max-width: 155rem;
+  margin: 0 auto;
 }
 .main-page {
   max-width: 155rem;
